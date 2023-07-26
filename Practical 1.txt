@@ -1,0 +1,84 @@
+Practical 1
+
+1. #include<stdio.h>
+   int main()
+   {
+   printf("My name is Gayathmee");
+   printf("My school is Taxila Central College");
+   }
+
+2. #include<stdio.h>
+   int main()
+   {  
+    printf("*\n**\n***\n****\n*****\n");
+   }
+
+3. #include<stdio.h>
+   int main()
+   {
+   int a;
+   float b;
+   char x;
+   double c;
+   printf("Enter the values for int, float, char and double data types:= "):
+   scanf("%d %f %c %lf",&a,&b,&x,&c);
+   printf("a=%d, b=%f , x=%c, c=%f",a,b,x,c);
+   }
+
+4. #include<stdio.h>
+   int main()
+   {
+   int x,y,tot;
+   printf("Enter 2 integers:= ");
+   scanf("%d %d",&x,&y);
+   tot=x+y;
+   printf("Total=%d",tot);
+   }
+
+5. #include<stdio.h>
+   int main()
+   {
+   float x,y,avg;
+   printf("Enter 2 decimal no.s:= ");
+   scanf("%f %f",&x,&y);
+   avg=(x+y)/2;
+   printf("Average=%.2f",avg);
+   }
+
+6. #include<stdio.h>
+   int main()
+   {
+   int age,byr;
+   char name[20];
+   printf("Enter student name and the birth year:= ");
+   scanf("%s %d",&name,&byr);
+   age=2023-byr;
+   printf("%s is now %d years old",name,age);
+   }
+
+7. #include <stdio.h>
+   int main()
+   {
+    int x,y,temp;
+    printf("enter the x value:-");
+    scanf("%d",&x);
+    printf("enter the y value:-");
+    scanf("%d",&y);
+    printf("x = %d and y = %d\n",x,y);
+    temp=x;
+    x=y;
+    y=temp;
+    printf("Now x = %d and y = %d",y,x);
+    return 0;
+    }
+
+8. The color: blue
+   First number: 12345
+   Second number: 0025
+   Third number: 1234
+   Float number: 3.14
+   Hexadecimal: ff
+   Octal: 377
+   Unsigned value: 150
+   Just print the percentage sign %
+
