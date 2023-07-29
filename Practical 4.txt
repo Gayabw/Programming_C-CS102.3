@@ -350,6 +350,228 @@ int main()
       }
 }
 
+Q11)
+
+#include <stdio.h>
+int main() {
+    int n, i, flag = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    // 0 and 1 are not prime numbers
+    // change flag to 1 for non-prime number
+    if (n == 0 || n == 1)
+        flag = 1;
+    for (i = 2; i <= n /2; ++i) {
+        // if n is divisible by i, then n is not prime
+        // change flag to 1 for non-prime number
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    // flag is 0 for prime numbers
+    if (flag == 0)
+        printf("%d is a prime number.", n);
+    else
+        printf("%d is not a prime number.", n);
+    return 0;
+}
+
+Q12)
+
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    printf("Factors of %d are: ", num);
+    for (i = 1; i <= num; ++i) {
+        if (num % i == 0) {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+
+Q13)
+
+#include <stdio.h>
+
+int main()
+ {
+    int num[10],i;
+    for(i=0;i<10;i++)
+    {
+        printf("Enter %d integer:= ",i+1);
+        scanf("%d", &num[i]);
+    }
+
+    for(i=0;i<10;i++)
+    {
+        printf("%d ",num[i]);
+
+    }
+}
+
+Q14)
+
+#include <stdio.h>
+
+int main()
+ {
+    int num[10],i,even=0;
+    for(i=0;i<10;i++)
+    {
+        printf("Enter %d integer:= ",i+1);
+        scanf("%d", &num[i]);
+    }
+
+    for(i=0;i<10;i++)
+    {
+        printf("%d ",num[i]);
+
+    }
+    printf("\n");
+     for(i=0;i<10;i++)
+    {
+        if(num[i]%2==0)
+            even+=1;
+    }
+    printf("The number of even numbers are = %d",even);
+}
+
+B-section B
+
+Q1)
+
+#include <stdio.h>
+
+int main()
+ {
+    int i,p=0,n=0,o=0;
+    for(int c=1;c<=10;c++)
+    {
+        printf("Enter a number:= ");
+        scanf("%d",&i);
+        if(i<0)
+            n++;
+        else if(i==0)
+            o++;
+        else
+            p++;
+    }
+    printf("Positives=%d, negatives=%d, zeros=%d",p,n,o);
+ }
+
+
+Q2)
+
+#include <stdio.h>
+
+int main()
+ {
+    int i,max=0,min;
+    float avg;
+    for(int c=1;c<=10;c++)
+    {
+        printf("Enter the mark:= ");
+        scanf("%d",&i);
+        min=i;
+        if(i<=min)
+            min=i;
+        if(i>=max)
+            max=i;
+    }
+    printf("max=%d, min=%d,average=%.2f",max,min,(float)i/10.0);
+
+ }
+
+Q3)
+
+#include <stdio.h>
+
+int main()
+ {
+    int i,num=0,t=0;
+    float avg;
+    for(int c=1;c<=10;c++)
+    {
+        printf("Enter the price:= ");
+        scanf("%d",&i);
+        t+=i;
+
+        if(i>200)
+            num++;
+    }
+    avg=t/10;
+    printf("items greater than 200=%d,average=%.2f",num,(float)i/10.0);
+
+ }
+
+Q4)
+
+#include <stdio.h>
+
+int main() {
+    int emp_no, basic_salary, count = 0;
+
+    printf("Enter Employee no and Basic Salary: ");
+    scanf("%d %d", &emp_no, &basic_salary);
+
+    while (emp_no != -999) {
+        if (basic_salary >= 5000) {
+            count++;
+        }
+
+        printf("Enter Employee no and Basic Salary: ");
+        scanf("%d %d", &emp_no, &basic_salary);
+    }
+
+    printf("Number of Employees whose Basic Salary >=5000: %d\n", count);
+
+    return 0;
+}
+
+Q5)
+
+#include <stdio.h>
+
+int main() {
+    int employee_number;
+    float hours_worked, overtime_pay;
+    int count = 0, count_exceeding_4000 = 0;
+
+    printf("Enter employee number (-999 to end): ");
+    scanf("%d", &employee_number);
+
+    while (employee_number != -999) {
+        printf("Enter hours worked: ");
+        scanf("%f", &hours_worked);
+
+        if (hours_worked > 40) {
+            overtime_pay = (hours_worked - 40) * 200 + 40 * 150;
+        } else {
+            overtime_pay = (hours_worked - 40) * 150;
+        }
+
+        printf("Employee number: %d\n", employee_number);
+        printf("Overtime pay: %.2f\n", overtime_pay);
+
+        if (overtime_pay > 4000) {
+            count_exceeding_4000++;
+        }
+
+        count++;
+
+        printf("\nEnter employee number (-999 to end): ");
+        scanf("%d", &employee_number);
+    }
+
+    printf("\nPercentage of employees whose overtime payment exceeds Rs.4000: %.2f%%\n", ((float)count_exceeding_4000 / count) * 100);
+
+    return 0;
+}
 
 
 
