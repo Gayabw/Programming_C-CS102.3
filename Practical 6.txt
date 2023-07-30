@@ -1,0 +1,70 @@
+Practical 6
+
+1.
+
+#include<stdio.h>
+int main()
+{
+int ele[10],i,min=ele[10],max=0,tot=0;
+float avg;
+
+for(i=0;i<10;++i)
+{
+   printf("Enter an element to the %d index:= ",i+1);
+   scanf("%d",&ele[i]);
+   if(ele[i]>max)
+     max=ele[i];
+   if(ele[i]<min)
+     min=ele[i];
+   tot+=ele[i];
+}
+for(i=0;i<10;++i)
+{
+   printf("%d ",ele[i]);
+
+}printf("\n");
+avg=tot/10;
+printf("The minimum=%d, maximun=%d, average=%.2f\n",min,max,avg);
+for(i=9;i>=0;--i)
+{
+   printf("%d ",ele[i]);
+
+}
+}
+
+2.
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr1[n], arr2[n], arr3[n];
+    printf("Enter the elements of the first array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr1[i]);
+    }
+
+    printf("Enter the elements of the second array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr2[i]);
+    }
+
+    // Scalar Sum
+    int scalar_sum = 0;
+    for (int i = 0; i < n; i++) {
+        scalar_sum += arr1[i] + arr2[i];
+    }
+    printf("Scalar Sum: %d\n", scalar_sum);
+
+    // Vector Sum
+    for (int i = 0; i < n; i++) {
+        arr3[i] = arr1[i] + arr2[i];
+    }
+    printf("Vector Sum: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr3[i]);
+    }
+}
